@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="0dp"
+        android:layout_height="700px"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="72dp"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvContrast" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:text="guardar"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="@+id/rojo" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="brillo/contraste"
+        app:layout_constraintBottom_toTopOf="@+id/rojo"
+        app:layout_constraintStart_toEndOf="@+id/button" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="invert"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button2"
+        app:layout_constraintStart_toEndOf="@+id/button2" />
+
+    <Button
+        android:id="@+id/rojo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="rojo"
+        app:layout_constraintBaseline_toBaselineOf="@+id/azul"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/azul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="azul"
+        app:layout_constraintBottom_toTopOf="@+id/gamma"
+        app:layout_constraintStart_toEndOf="@+id/button" />
+
+    <Button
+        android:id="@+id/verde"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="verde"
+        app:layout_constraintStart_toEndOf="@+id/azul"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+    <Button
+        android:id="@+id/gris"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="gris"
+        app:layout_constraintBaseline_toBaselineOf="@+id/verde"
+        app:layout_constraintStart_toEndOf="@+id/verde" />
+
+
+    <TextView
+        android:id="@+id/tvBrightness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Brillo"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/seekBarBrightness"
+        app:layout_constraintStart_toStartOf="@+id/seekBarBrightness"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekBarBrightness"
+        android:layout_width="357dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginBottom="34dp"
+        android:max="400"
+        android:progress="200"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/tvContrast"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvBrightness" />
+
+    <TextView
+        android:id="@+id/tvContrast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:gravity="center_horizontal"
+        android:text="Contrast"
+        android:visibility="visible"
+
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="56dp" />
+
+    <SeekBar
+        android:id="@+id/seekBarContrast"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="13dp"
+        android:max="30"
+        android:progress="10"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvContrast" />
+
+    <Button
+        android:id="@+id/gamma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+
+        android:layout_marginBottom="30dp"
+        android:text="gamma"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:text="Gamma"
+        android:textColor="#090909"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="@+id/tvContrast"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:max="5"
+        android:progress="2"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/seekBarContrast"
+        app:layout_constraintEnd_toEndOf="@+id/seekBarContrast"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintTop_toTopOf="@+id/seekBarContrast" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
